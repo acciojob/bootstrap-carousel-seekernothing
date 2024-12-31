@@ -26,6 +26,7 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Wrapper for slides -->
@@ -48,6 +49,12 @@
           <h3>Third Slide</h3>
         </div>
       </div>
+      <div class="item fourth-slide">
+        <img src="https://via.placeholder.com/800x400?text=Fourth+Slide" alt="Fourth Slide">
+        <div class="carousel-caption">
+          <h3>Fourth Slide</h3>
+        </div>
+      </div>
     </div>
 
     <!-- Left and right controls -->
@@ -63,5 +70,11 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+    // Ensuring the carousel transitions properly
+    $('#myCarousel').on('slid.bs.carousel', function () {
+      console.log('Slide transition completed');
+    });
+  </script>
 </body>
 </html>
