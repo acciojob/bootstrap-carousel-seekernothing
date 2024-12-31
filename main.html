@@ -23,15 +23,15 @@
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="0"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
-      <div class="item active first-slide">
+      <div class="item first-slide">
         <img src="https://via.placeholder.com/800x400?text=First+Slide" alt="First Slide">
         <div class="carousel-caption">
           <h3>First Slide</h3>
@@ -43,7 +43,7 @@
           <h3>Second Slide</h3>
         </div>
       </div>
-      <div class="item third-slide">
+      <div class="item active third-slide">
         <img src="https://via.placeholder.com/800x400?text=Third+Slide" alt="Third Slide">
         <div class="carousel-caption">
           <h3>Third Slide</h3>
@@ -71,9 +71,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script>
-    // Ensuring the carousel transitions properly
-    $('#myCarousel').on('slid.bs.carousel', function () {
-      console.log('Slide transition completed');
+    // Ensure the third slide is loaded first
+    $(document).ready(function () {
+      $('#myCarousel').carousel(2); // Moves directly to the third slide (index 2)
     });
   </script>
 </body>
